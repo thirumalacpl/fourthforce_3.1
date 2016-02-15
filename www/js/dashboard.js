@@ -40,6 +40,8 @@ user_id=regionArray_array.user_id;
 E_Mail=regionArray_array.E_Mail;
 state=regionArray_array.state;
 
+//alert(region+'regionArray_array');
+//alert(user_id+'user_id');
 
 for(a=0;a<gcm_reg_id_array.length;a++){
   gcm_id = gcm_reg_id_array[a];
@@ -366,7 +368,7 @@ alert('Network error has occurred please try again!');
 
 $(document).off('click', '#completed').on('click', '#completed', function() {
 //alert(region+'verified');
-$.ajax({url: 'http://staging.eimpressive.com/slim-four/completed.php?region='+region+"&user_id="+user_id,
+$.ajax({url: 'http://staging.eimpressive.com/slim-four/completed.php?region='+region+"&user_id="+user_id+"&state="+state,
   data:$('#newt').serialize(),
   type: 'post',                   
   async: 'true',
